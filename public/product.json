@@ -1,0 +1,101 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 13",
+      "image": "https://i.ibb.co/bv4zmYY/mobile1.jpg",
+      "category": "mobile",
+      "description": "The latest iPhone with amazing features.",
+      "price": 999.99
+    },
+    {
+      "id": 2,
+      "name": "Samsung 4K Smart TV",
+      "image": "https://i.ibb.co/34CVPwP/tv1.jpg",
+      "category": "tv",
+      "description": "Experience stunning 4K resolution on this smart TV.",
+      "price": 799.99
+    },
+    {
+      "id": 3,
+      "name": "MacBook Pro",
+      "image": "https://i.ibb.co/166sDkD/laptop1.jpg",
+      "category": "laptop",
+      "description": "Powerful laptop for professionals and creatives.",
+      "price": 1499.99
+    },
+    {
+      "id": 4,
+      "name": "https://i.ibb.co/BjyTjsk/mobile2.jpg",
+      "image": "https://example.com/s21.jpg",
+      "category": "mobile",
+      "description": "High-performance Android smartphone.",
+      "price": 899.99
+    },
+    {
+      "id": 5,
+      "name": "LG OLED 4K TV",
+      "image": "https://i.ibb.co/RvsfLr5/tv2.jpg",
+      "category": "tv",
+      "description": "Immerse yourself in stunning OLED picture quality.",
+      "price": 1299.99
+    },
+    {
+      "id": 6,
+      "name": "Dell XPS 13",
+      "image": "https://i.ibb.co/zbLthSc/laptop2.jpg",
+      "category": "laptop",
+      "description": "Ultra-thin and lightweight laptop for productivity.",
+      "price": 1199.99
+    },
+    {
+      "id": 7,
+      "name": "Google Pixel 6",
+      "image": "https://i.ibb.co/TPZmsv3/mobile3.jpg",
+      "category": "mobile",
+      "description": "The latest Google Pixel phone with exceptional camera capabilities.",
+      "price": 799.99
+    },
+    {
+      "id": 8,
+      "name": "Sony 65-inch 4K TV",
+      "image": "https://i.ibb.co/RQcT6Tn/tv3.jpg",
+      "category": "tv",
+      "description": "Enjoy cinematic visuals on this 4K TV.",
+      "price": 999.99
+    },
+    
+    {
+      "id": 10,
+      "name": "OnePlus 9 Pro",
+      "image": "https://i.ibb.co/1ZG4CYL/mobile4.jpg",
+      "category": "mobile",
+      "description": "Premium Android smartphone with fast charging.",
+      "price": 899.99
+    },
+    {
+      "id": 11,
+      "name": "LG NanoCell 4K TV",
+      "image": "https://i.ibb.co/CHjTTQ8/tv4.jpg",
+      "category": "tv",
+      "description": "Experience vibrant colors with NanoCell technology.",
+      "price": 1099.99
+    },
+    {
+      "id": 12,
+      "name": "HP Spectre x360",
+      "image": "https://i.ibb.co/wwjKNDn/laptop4.jpg",
+      "category": "laptop",
+      "description": "Versatile 2-in-1 laptop with a sleek design.",
+      "price": 1199.99
+    },
+    {
+      "id": 6,
+      "name": "Dell XPS 13",
+      "image": "https://i.ibb.co/zbLthSc/laptop2.jpg",
+      "category": "laptop",
+      "description": "Ultra-thin and lightweight laptop for productivity.",
+      "price": 1199.99
+    }
+  ]
+}
