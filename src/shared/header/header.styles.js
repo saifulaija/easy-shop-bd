@@ -3,17 +3,19 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   width: 100%;
   height: 10%;
-  background-color: white;
+  background-color: ${(props)=> props.theme.colors.bgDefault};
   border-bottom: 0.1px solid #e3d4e8;
+ 
 `;
 
 export const Container = styled.div`
   max-width: 1440px;
   height: 60px;
-  margin: 0 20px;
+  margin: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 `;
 
 export const RightItem = styled.div``;
@@ -21,7 +23,7 @@ export const MiddleItem = styled.div``;
 export const LeftItem = styled.div``;
 
 export const Logo = styled.h2`
-  color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.primary};
   cursor: pointer;
   font-size: 20px;
   text-decoration: underline;
@@ -37,10 +39,10 @@ export const Menu = styled.ul`
 export const MenuItem = styled.li`
   font-weight: bold;
   font-size: 18px;
-  color: gray;
+  color:  ${(props)=> props.theme.colors.textDark};
   cursor: pointer;
   &:hover {
-    color: darkblue;
+    color:  ${(props)=> props.theme.colors.primary};
   }
 `;
 
@@ -50,17 +52,17 @@ export const LinkItem = styled.link`
 `;
 
 export const Button = styled.button`
-  background-color: darkblue;
+  background-color:  ${(props)=> props.theme.colors.primary};
   border: 2px solid white;
   cursor: pointer;
-  color: white;
+  color: ${(props)=> props.theme.colors.bgDefault};
   font-size: 16px;
 
   padding: 8px 20px;
   border-radius: 10px;
   &:hover {
-    background-color: aliceblue;
-    color: darkblue;
+    background-color:  ${(props)=> props.theme.colors.bgLight};
+    color:  ${(props)=> props.theme.colors.primary};
     border: 2px solid darkblue;
   }
 `;

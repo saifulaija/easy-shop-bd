@@ -8,7 +8,13 @@ import { ThemeProvider } from "styled-components";
 const theme = {
   colors: {
     primary: "darkBlue",
-    secondary: "darkBlue",
+    secondary: "tomato",
+    light: "black",
+    text: "snow",
+    textDark: "gray",
+    bgDefault: "white",
+    bgPrimary: "darkBlue",
+    bgLight: "aliceBlue",
   },
 };
 
