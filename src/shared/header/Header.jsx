@@ -1,16 +1,41 @@
-import { Container, LeftItem, MiddleItem, RightItem, Wrapper } from "./header.styles";
-
+import {
+      Button,
+  Container,
+  LeftItem,
+  Logo,
+  Menu,
+  MenuItem,
+  MiddleItem,
+  RightItem,
+  Wrapper,
+} from "./header.styles";
 
 const Header = () => {
-      return (
-            <Wrapper>
-               <Container>
-                  <RightItem>Right</RightItem>
-                  <MiddleItem>Left</MiddleItem>
-                  <LeftItem>Middle</LeftItem>
-               </Container>
-            </Wrapper>
-      );
+  const navItem = (
+    <>
+      <MenuItem>Home</MenuItem>
+      <MenuItem>Shop</MenuItem>
+      <MenuItem>Contact</MenuItem>
+    </>
+  );
+
+  return (
+    <Wrapper>
+      <Container>
+        <RightItem>
+          <Logo>Easy Shop</Logo>
+        </RightItem>
+        <MiddleItem>
+          <Menu>{navItem}</Menu>
+        </MiddleItem>
+        <LeftItem>
+            <Button>
+                  Login
+            </Button>
+        </LeftItem>
+      </Container>
+    </Wrapper>
+  );
 };
 
 export default Header;
