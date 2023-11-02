@@ -1,39 +1,140 @@
-import { useEffect, useState } from "react";
-import TextBanner from "../textBanner/TextBanner";
-import { CardContainer, Container, Wrapper } from "./categoryProducts.styles";
-import ProductCard from "../productCard/ProductCard";
+// import { useEffect, useState } from "react";
+// import TextBanner from "../textBanner/TextBanner";
+// import { CardContainer, Container, Wrapper } from "./categoryProducts.styles";
+// import ProductCard from "../productCard/ProductCard";
 
+
+// const CategoryProducts = () => {
+
+// const [products, setProducts] = useState([])
+
+// useEffect(()=>{
+// fetch('/public/product.json')
+// .then(res=> res.json())
+// .then(data=>{
+//       console.log(data);
+//       setProducts(data)
+// })
+// },[])
+
+// console.log(products);
+
+//       return (
+//             <Wrapper>
+//                   <Container>
+//                   <div>
+//                   <TextBanner title={'Category'} subtitle={'Our Services'}></TextBanner>
+//                   <CardContainer>
+//                         {
+//                               products.products?.map(product=> <ProductCard key={product.id} product={product}></ProductCard>)
+//                         }
+//                   </CardContainer>
+//                   </div>
+//                   </Container>
+
+//             </Wrapper>
+//       );
+// };
+
+// export default CategoryProducts;
+
+import  { useEffect, useState } from 'react';
+import TextBanner from '../textBanner/TextBanner';
+import { CardContainer, Container, Wrapper, FilterSortContainer, FilterSelect, SortSelect, PaginationContainer, PaginationButton } from './categoryProducts.styles';
+import ProductCard from '../productCard/ProductCard';
+
+const productsPerPage = 6;
 
 const CategoryProducts = () => {
+  const [products, setProducts] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortOrder, setSortOrder] = useState('ascending');
+  const [currentPage, setCurrentPage] = useState(1);
 
-const [products, setProducts] = useState([])
+  useEffect(() => {
+    fetch('/public/product.json')
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data);
+      });
+  }, []);
 
-useEffect(()=>{
-fetch('/public/product.json')
-.then(res=> res.json())
-.then(data=>{
-      console.log(data);
-      setProducts(data)
-})
-},[])
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
 
-console.log(products);
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = products.products
+    ? selectedCategory === 'all'
+      ? products.products.slice(indexOfFirstProduct, indexOfLastProduct)
+      : products.products
+          .filter((product) => product.category === selectedCategory)
+          .slice(indexOfFirstProduct, indexOfLastProduct)
+    : [];
 
-      return (
-            <Wrapper>
-                  <Container>
-                  <div>
-                  <TextBanner title={'Category'} subtitle={'Our Services'}></TextBanner>
-                  <CardContainer>
-                        {
-                              products.products?.map(product=> <ProductCard key={product.id} product={product}></ProductCard>)
-                        }
-                  </CardContainer>
-                  </div>
-                  </Container>
+  const sortedProducts = currentProducts.slice().sort((a, b) => {
+    if (sortOrder === 'ascending') {
+      return a.price - b.price;
+    } else {
+      return b.price - a.price;
+    }
+  });
 
-            </Wrapper>
-      );
+  const totalPages = Math.ceil(
+    (selectedCategory === 'all'
+      ? products.products?.length
+      : products.products?.filter((product) => product.category === selectedCategory).length) /
+      productsPerPage
+  );
+
+  return (
+    <Wrapper>
+      <Container>
+        <div>
+          <TextBanner title={'Category'} subtitle={'Our Services'}></TextBanner>
+
+          <FilterSortContainer>
+            <FilterSelect
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+            >
+              <option value="all">All</option>
+              <option value="mobile">Mobile</option>
+              <option value="tv">TV</option>
+              <option value="laptop">Laptop</option>
+            </FilterSelect>
+
+            <SortSelect
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value)}
+            >
+              <option value="ascending">Price - Low to High</option>
+              <option value="descending">Price - High to Low</option>
+            </SortSelect>
+          </FilterSortContainer>
+
+          <CardContainer>
+            {sortedProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </CardContainer>
+
+          <PaginationContainer>
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <PaginationButton
+              key={index}
+              onClick={() => handlePageChange(index + 1)}
+              isActive={currentPage === index + 1}
+            >
+              {index + 1}
+              </PaginationButton>
+            ))}
+          </PaginationContainer>
+        </div>
+      </Container>
+    </Wrapper>
+  );
 };
 
 export default CategoryProducts;

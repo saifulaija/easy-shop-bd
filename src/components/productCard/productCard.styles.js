@@ -8,6 +8,14 @@ export const Card = styled.div`
   border: 0.1px solid gray;
   text-align: center;
   border-radius: 10px;
+  box-shadow: -1px 7px 5px 0px rgba(0, 0, 0, 0.31);
+  -webkit-box-shadow: -1px 7px 5px 0px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: -1px 7px 5px 0px rgba(0, 0, 0, 0.31);
+  opacity: 1;
+  transition: opacity 1s ease 0s;
+  &:hover {
+    opacity: 0.62;
+  }
 `;
 export const ImageContainer = styled.div`
   width: 60px;
@@ -60,6 +68,6 @@ export const Button = styled.button`
   &:hover {
     background-color: ${(props) => props.theme.colors.bgLight};
     color: ${(props) => props.theme.colors.primary};
-    border: 2px solid darkblue;
+    border: 2px solid tomato;
   }
 `;

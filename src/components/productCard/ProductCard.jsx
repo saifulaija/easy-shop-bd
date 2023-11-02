@@ -7,7 +7,7 @@ const ProductCard = ({product}) => {
       return (
             <Card>
                 <ImageContainer>
-                  <Image src={image}></Image>
+                  <Image src={image} alt="image not found"></Image>
 
                 </ImageContainer>
                 <Title>{name}</Title>

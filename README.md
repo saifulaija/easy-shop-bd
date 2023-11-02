@@ -1,8 +1,33 @@
-# React + Vite
+# Easy Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Easy Shop Screenshot](./src/assets/project.png)
 
-Currently, two official plugins are available:
+Easy Shop is an e-commerce web application built with React, styled-components, and react-icons. It offers a seamless shopping experience for a range of electrical products, including mobile phones, TVs, and laptops.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
+
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Getting Started
+
+Follow these steps to set up and run Easy Shop on my local machine.
+
+### Prerequisites
+
+Before i begin, ensure i have the following software and tools installed:
+
+- [Node.js](https://nodejs.org/) 
+- [npm](https://www.npmjs.com/) 
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/saifulaija/easy-shop-bd

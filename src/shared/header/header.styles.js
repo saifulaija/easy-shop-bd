@@ -34,6 +34,10 @@ export const Menu = styled.ul`
   display: flex;
   gap: 10px;
   list-style: none;
+   /* for mobile device */
+   @media only screen and (max-width:600px){
+  display: none;
+  }
 `;
 
 export const MenuItem = styled.li`

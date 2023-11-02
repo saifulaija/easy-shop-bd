@@ -17,7 +17,8 @@ children:[
       {
             path: 'shop',
             element:<Shop></Shop>
-      }
+      },
+      
 ]
 }
 
