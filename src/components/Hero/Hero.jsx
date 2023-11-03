@@ -6,7 +6,7 @@ const Hero = () => {
       <Container>
         <Left>
           <Title>Your one-stop online shopping destination!</Title>
-          <Description>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate laboriosam doloribus velit optio neque fugiat, explicabo, nostrum beatae unde odit error vero voluptatum! Eius commodi dicta deleniti quas, qui repellendus.</Description>
+          <Description>Easy Shop is your convenient online store, offering a wide range of products to meet your shopping needs. From the comfort of your home, you can browse and purchase a variety of items. We provide a seamless shopping experience, delivering quality and satisfaction at your fingertips</Description>
           <ButtonContainer>
             <Button>About Us</Button>
             <Button>Know More</Button>
