@@ -20,19 +20,14 @@ const CategoryProducts = () => {
   const [sortOrder, setSortOrder] = useState("ascending");
   const [currentPage, setCurrentPage] = useState(1);
 
-  fetch("/product.json")
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error(`Network response was not ok: ${res.status}`);
-      }
-      return res.json();
-    })
-    .then((data) => {
-      setProducts(data);
-    })
-    .catch((error) => {
-      console.error("Fetch error:", error);
-    });
+  useEffect(() => {
+    fetch("/product.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data);
+      });
+  }, []);
+  console.log(products);
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
