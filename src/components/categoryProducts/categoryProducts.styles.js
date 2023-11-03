@@ -5,8 +5,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  max-width: 1440px;
-  padding: 0 10px;
+  max-width: 1240px;
+  
 `;
 
 export const CardContainer = styled.div`
