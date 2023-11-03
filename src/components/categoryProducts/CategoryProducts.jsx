@@ -20,13 +20,19 @@ const CategoryProducts = () => {
   const [sortOrder, setSortOrder] = useState("ascending");
   const [currentPage, setCurrentPage] = useState(1);
 
-  useEffect(() => {
-    fetch("/public/product.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-      });
-  }, []);
+  fetch("/public/product.json")
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`Network response was not ok: ${res.status}`);
+      }
+      return res.json();
+    })
+    .then((data) => {
+      setProducts(data);
+    })
+    .catch((error) => {
+      console.error("Fetch error:", error);
+    });
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -62,7 +68,10 @@ const CategoryProducts = () => {
     <Wrapper>
       <Container>
         <div>
-          <TextBanner title={"Category Wise"} subtitle={"Our Services"}></TextBanner>
+          <TextBanner
+            title={"Category Wise"}
+            subtitle={"Our Services"}
+          ></TextBanner>
 
           <FilterSortContainer>
             <FilterSelect

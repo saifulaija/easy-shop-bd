@@ -12,7 +12,7 @@ export const Container = styled.div`
   align-items: center;
   color: ${(props) => props.theme.colors.bgDefault};
   background-color: ${(props) => props.theme.colors.light};
-  width: 100%;
+  max-width: 1440px;
   margin-top: 5%;
   height: 40%;
   padding: 5%;
