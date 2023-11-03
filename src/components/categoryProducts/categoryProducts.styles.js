@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   max-width: 1440px;
-  padding: 0 20px;
+  padding: 0 10px;
 `;
 
 export const CardContainer = styled.div`
