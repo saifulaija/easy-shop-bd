@@ -70,6 +70,7 @@ export const Title = styled.h1`
    /* for mobile device */
    @media only screen and (max-width:600px){
   max-width: 100%;
+  font-size: 30px;
   }
 `;
 

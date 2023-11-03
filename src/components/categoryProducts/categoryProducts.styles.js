@@ -29,8 +29,8 @@ export const FilterSelect = styled.select`
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color:  ${(props)=> props.theme.textDark};;
-  color: ${(props)=> props.theme.textDark};
+  background-color: ${(props) => props.theme.textDark};
+  color: ${(props) => props.theme.textDark};
   font-size: 16px;
   margin-right: 10px;
   cursor: pointer;
@@ -40,7 +40,7 @@ export const SortSelect = styled.select`
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: ${(props)=> props.theme.textDark};;
+  background-color: ${(props) => props.theme.textDark};
   color: #333;
   font-size: 16px;
   cursor: pointer;
