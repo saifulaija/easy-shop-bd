@@ -62,7 +62,7 @@ const CategoryProducts = () => {
     <Wrapper>
       <Container>
         <div>
-          <TextBanner title={"Category"} subtitle={"Our Services"}></TextBanner>
+          <TextBanner title={"Category Wise"} subtitle={"Our Services"}></TextBanner>
 
           <FilterSortContainer>
             <FilterSelect
