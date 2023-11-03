@@ -20,7 +20,7 @@ const CategoryProducts = () => {
   const [sortOrder, setSortOrder] = useState("ascending");
   const [currentPage, setCurrentPage] = useState(1);
 
-  fetch("/public/product.json")
+  fetch("/product.json")
     .then((res) => {
       if (!res.ok) {
         throw new Error(`Network response was not ok: ${res.status}`);
